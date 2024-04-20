@@ -1,0 +1,29 @@
+<template>
+    <!-- Example of simple data -->
+    <c-p2c-alert-component
+    message = 'Hurray ! I got the data !!!'
+    heading = "Parent to child primitive data communication !"
+    number = 20
+    is-valid = false
+    ></c-p2c-alert-component>
+
+
+    <!-- Example of complex data -->
+    <div class="slds-var-m-bottom_medium">
+        <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+    </div>
+
+
+    <!-- Example of data passing on action -->
+    
+    <lightning-card title="Parent to child on action at parent component">
+        <div class="slds-var-m-bottom_medium">
+            <lightning-input type="number" label="Enter percentage"
+            onkeyup={changeHandler}
+            ></lightning-input>
+            <c-p2c-progress-component
+            progress-value={percentage}>
+        </c-p2c-progress-component>    
+        </div>
+    </lightning-card>    
+</template>
